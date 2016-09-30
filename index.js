@@ -32,17 +32,17 @@
     // });
 
     Info.findById({_id: '57ecc66763f5b511c427435f'}, function(err, user) {
-      user.remove(function(err){
-        console.log('delete')
-      })
-      // user.age = '666666'
-      // user.save(function(err){
-      //   console.log('更新了！')
+      // user.remove(function(err){
+      //   console.log('delete')
+      // })
+      user.age = '666666'
+      user.save(function(err){
+        console.log('更新了！')
         Info.find().exec(function(err, users) {
           // 异步执行
           console.log(users);
         });
-      // });
+      });
     });
 
     console.log("我先出来了")
