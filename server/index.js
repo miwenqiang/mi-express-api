@@ -28,6 +28,11 @@ db.once('open', function() {
       res.json({posts:posts})
     })
   })
+  app.get('/post/:id',function(req,res){
+    Post.findOne({_id:req.params.id},function(err,doc){
+      res.json({post:doc})
+    })
+  })
   app.post('/posts',function(req,res){
     var post = new Post({
       title:req.body.title,

@@ -17,23 +17,7 @@ class App extends Component {
         fontSize: '1.5em',
         color: '#fff',
         textDecoration: 'none'
-      },
-      button: {
-       display: 'block',
-       margin: '30px auto',
-       width: '120px',
-       height: '36px',
-       lineHeight: '36px',
-       textAlign: 'center',
-       backgroundColor: '#ff4081',
-       fontSize: '1em',
-       color: '#fff',
-       textDecoration: 'none',
-       borderRadius: '20px'
-     },
-     div:{
-       display:'flex'
-     }
+      }
     };
   }
 
@@ -42,12 +26,8 @@ class App extends Component {
     return (
       <div>
         <header style={styles.header}>
-          <div style={styles.link}>BORN TO CODE</div>
+          <Link to='/' style={styles.link}>BORN TO CODE</Link>
         </header>
-        <div style={styles.div}>
-          <Link to='/write' style={styles.button}>写文章</Link>
-          <Link to='/tag' style={styles.button}>分类</Link>
-        </div>
         { this.props.children }
       </div>
     );
