@@ -89,10 +89,10 @@ class Form extends Component {
         </div>
         <div style={styles.div}>
           <label style={styles.label}>内容</label>
-          <textarea style={[styles.input, {height: '100%'}]} rows='20' key='2' ref='content' />
+          <textarea style={[styles.input, {height: '100%',width:'100%'}]} rows='20' key='2' ref='content' />
         </div>
         <div style={styles.actions}>
-          <button type='submit' style={styles.button}>submit</button>
+          <button type='submit' style={styles.button}>发布文章</button>
           <Link to='/' style={styles.link}>取消</Link>
         </div>
       </form>
